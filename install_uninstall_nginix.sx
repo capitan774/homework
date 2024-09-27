@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# 1. Apt update and install NGINX
+sudo apt update && echo "------APT are updated !!!----------"
+
+# 2. Installing nginix
+sudo apt install -y nginx && echo "----------Nginx are installed !!!-------------"
+
+# 3. Show  PID of  Nginx 
+echo | pidof nginx && echo "------------There are PID of Nginx !!!----------"
+
+# 4. Sending HUP signal to Nginx PIDs
+sudo kill -HUP $(pidof nginx) && echo "-----------HUP signal are sended !!!--------------"
+
+# 5. Uninstall Nginx
+sudo apt remove -y && sudo apt purge -y nginx && sudo apt autoremove -y nginx && echo "-------------Nginx are removed !!!-------------"
+
+
+
+
+
+
